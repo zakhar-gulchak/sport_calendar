@@ -1,0 +1,4 @@
+sport:
+    resource: "@SportBundle/Resources/config/routing.xml"
+    prefix:   /
+
