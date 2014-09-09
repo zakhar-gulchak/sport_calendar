@@ -20,7 +20,11 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/data-fixtures": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
-        "hautelook/alice-bundle": "0.1.*"
+        "hautelook/alice-bundle": "0.1.*",
+        "phpunit/phpunit": "4.2.*",
+        "squizlabs/php_codesniffer": "1.*",
+        "phpmd/phpmd" : "2.0.*",
+        "pdepend/pdepend" : "2.*"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

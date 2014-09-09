@@ -4,17 +4,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
     <parameters>
-        <parameter key="sport.example.class">Zahar\SportBundle\Example</parameter>
+        <parameter key="sport.calendar.class">Zahar\SportBundle\Calendar</parameter>
     </parameters>
 
     <services>
-        <service id="sport.example" class="%sport.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="sport.calendar" class="%sport.calendar.class%">
+
         </service>
     </services>
-    -->
 </container>

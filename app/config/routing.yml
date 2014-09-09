@@ -1,4 +1,6 @@
 sport:
     resource: "@SportBundle/Resources/config/routing.xml"
-    prefix:   /
+    prefix:   /{_locale}/
+    requirements:
+        _locale: en|ru
 

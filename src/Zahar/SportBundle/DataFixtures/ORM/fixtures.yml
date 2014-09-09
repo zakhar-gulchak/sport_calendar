@@ -1,0 +1,7 @@
+Zahar\SportBundle\Entity\Exercise:
+    excercise{1..350}:
+        description: <randomElement(['Press of a bar', 'Bumbbell bench press', 'Barbell press seated incline'])>
+        weight: <numberBetween(20, 200)>
+        count: <numberBetween(5, 15)>
+        date: <dateTimeBetween('-30 days', 'now')>
+        time: <dateTime()>

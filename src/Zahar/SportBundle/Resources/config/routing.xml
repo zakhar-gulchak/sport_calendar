@@ -7,4 +7,7 @@
     <route id="sport_homepage" path="/hello/{name}">
         <default key="_controller">SportBundle:Default:index</default>
     </route>
+    <route id="sport_calendar_page" path="/calendar">
+        <default key="_controller">SportBundle:Default:calendar</default>
+    </route>
 </routes>

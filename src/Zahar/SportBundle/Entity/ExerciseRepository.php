@@ -12,4 +12,8 @@ use Doctrine\ORM\EntityRepository;
  */
 class ExerciseRepository extends EntityRepository
 {
+    public function getAllExercisesByPeriod($period)
+    {
+        return $this;
+    }
 }

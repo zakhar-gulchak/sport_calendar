@@ -10,4 +10,11 @@ class DefaultController extends Controller
     {
         return $this->render('SportBundle:Default:index.html.twig', array('name' => $name));
     }
+
+    public function calendarAction()
+    {
+        $taskListArray = array();
+
+        return $this->render('SportBundle:Default:calendar.html.twig', array('taskListArray' => $taskListArray));
+    }
 }

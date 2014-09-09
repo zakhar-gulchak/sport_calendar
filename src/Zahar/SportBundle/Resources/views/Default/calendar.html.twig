@@ -1,0 +1,26 @@
+{% extends 'SportBundle::layout.html.twig' %}
+
+{% block content %}
+    <h1>{{ 'greetings' | trans }}</h1>
+    <h2>{{ 'heading1' | trans }}</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>{{ 'first_column_heading' | trans }}</th>
+            <th>{{ 'second_column_heading' | trans }}</th>
+            <th>{{ 'third_column_heading' | trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for taskList in taskListArray %}
+                <td>
+                    {% for task in taskList %}
+                        {{ task.description }} {{ task.weight }}kg X {{ task.count }}<br/>
+                    {% endfor %}
+                </td>
+            {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}
