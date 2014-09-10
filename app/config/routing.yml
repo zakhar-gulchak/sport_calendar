@@ -3,4 +3,3 @@ sport:
     prefix:   /{_locale}/
     requirements:
         _locale: en|ru
-

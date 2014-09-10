@@ -3,12 +3,13 @@
 namespace Zahar\SportBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Zahar\SportBundle\Entity\User;
 
 /**
  * Exercise
  *
  * @ORM\Table(name="exercise")
- * @ORM\Entity(repositoryClass="Zahar\SportBundle\Entity\ExerciseRepository")
+ * @ORM\Entity
  */
 class Exercise
 {
@@ -55,6 +56,13 @@ class Exercise
      * @ORM\Column(name="time", type="time")
      */
     private $time;
+
+    /**
+     * @var User
+     *
+     * @ORM\ManyToOne(targetEntity="\Zahar\SportBundle\Entity\User", inversedBy="exercises")
+     */
+    private $user;
 
 
     /**
@@ -180,5 +188,25 @@ class Exercise
     public function getTime()
     {
         return $this->time;
+    }
+
+    /**
+     * @param User $user
+     *
+     * @return self
+     */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

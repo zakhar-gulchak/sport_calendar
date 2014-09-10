@@ -1,3 +1,10 @@
+Zahar\SportBundle\Entity\User:
+    user1:
+        username: test@example.com
+        password: password
+    user{2..5}:
+        username: <email()>
+        password: <word()>
 Zahar\SportBundle\Entity\Exercise:
     excercise{1..350}:
         description: <randomElement(['Press of a bar', 'Bumbbell bench press', 'Barbell press seated incline'])>
@@ -5,3 +12,4 @@ Zahar\SportBundle\Entity\Exercise:
         count: <numberBetween(5, 15)>
         date: <dateTimeBetween('-30 days', 'now')>
         time: <dateTime()>
+        user: @user*

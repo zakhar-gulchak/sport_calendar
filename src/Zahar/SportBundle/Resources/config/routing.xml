@@ -10,4 +10,9 @@
     <route id="sport_calendar_page" path="/calendar">
         <default key="_controller">SportBundle:Default:calendar</default>
     </route>
+    <route id="login" path="/login">
+        <default key="_controller">SportBundle:Default:login</default>
+    </route>
+    <route id="login_check" path="/login_check" />
+    <route id="logout" path="/logout" />
 </routes>
