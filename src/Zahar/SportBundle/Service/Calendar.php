@@ -18,26 +18,33 @@ class Calendar
     }
 
     /**
-     * @param User $user
+     * @param User               $user
+     * @param \DateTimeImmutable $today
      *
      * @return array
      */
-    public function getAllStatistics($user)
+    public function getAllStatistics($user, $today = null)
     {
+        if(!$today)
+        {
+            $today = new \DateTimeImmutable('now');
+        }
+        $oneWeekAgo = $today->modify('1 week ago');
+        $twoWeeksAgo = $today->modify('2 weeks ago');
         $exerciseRepository = $this->_entityManager->getRepository('Zahar\SportBundle\Entity\Exercise');
 
         return array(
             'two weeks ago' => $exerciseRepository->findBy(array(
                 'user' => $user,
-                'date' =>  new \DateTime('2 weeks ago'),
+                'date' =>  $twoWeeksAgo,
             )),
             'week ago' => $exerciseRepository->findBy(array(
                 'user' => $user,
-                'date' =>  new \DateTime('1 week ago'),
+                'date' =>  $oneWeekAgo,
             )),
             'today' => $exerciseRepository->findBy(array(
                 'user' => $user,
-                'date' => new \DateTime('now'),
+                'date' => $today,
             )),
         );
     }
