@@ -65,9 +65,9 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         $mock2 = $this->getMockBuilder('Zahar\SportBundle\Entity\Exercise')->getMock();
         $mock3 = $this->getMockBuilder('Zahar\SportBundle\Entity\Exercise')->getMock();
 
-        $today = new \DateTime('10-09-2014');
-        $twoWeeksAgo = new \DateTime('27-08-2014');
-        $weekAgo = new \DateTime('03-09-2014');
+        $today = new \DateTimeImmutable('10-09-2014');
+        $twoWeeksAgo = new \DateTimeImmutable('27-08-2014');
+        $weekAgo = new \DateTimeImmutable('03-09-2014');
 
         $expectedResult = array(
             'two weeks ago' => array($mock1),
